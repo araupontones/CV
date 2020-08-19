@@ -1,0 +1,21 @@
+---
+output: 
+  html_document:
+    css: 'cv.css'
+---
+
+`r print(getwd())`
+
+<h1 style="text-align: center;"> Jaime Andrés Arau Pontones </h1>
+<p style = "text-align: center;">
++34657402968 / andres.arau@outlook.com </br>
+Av. Pablo Ruiz Picasso, No.4, 8D. Zaragoza, Spain. C.P 50018 </br>
+https://www.andresarau.com/
+</p>
+
+
+<p style = "font-weight: bold;">
+Self-employed Data Science consultant with 10 years of experience in the design and implementation of household surveys, online dashboards, interactive maps, and MEL systems. My expertise lies on combining data science with MEL approaches in order to enhance learning and facilitate ongoing adaptation and accountability of development programmes. By having led several large-scale surveys internationally, I have also gained extensive expertise in training teams, quantitative analysis, and data visualisation.
+</p>
+
+<h1 class="header_section"> INTERNATIONAL EXPERIENCE </h1>

@@ -1,0 +1,173 @@
+
+body{
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.title {
+  
+text-align: center;
+font-size: 28px;
+}
+
+p, td{
+  font-size: 16px;
+  
+}
+
+
+table {
+    page-break-inside: avoid;
+}
+
+/*space between lines in introduction details */
+
+br.short{
+  
+    display: block;
+    content: "";
+    margin-bottom: -2pt;
+}
+.header_section{
+  border-bottom: 1px solid black;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.icon_header {
+  width: 24px;
+  float: left;
+  margin: 16px 10px 0 0;
+  
+}
+
+.icon_big{
+  
+  margin: 10px 10px 0 0 !important;
+}
+.icon_intro {
+  width: 16px;
+  
+  
+}
+
+table{
+  
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 .5em ;
+  /*vertical-align: text-top !important;*/
+
+}
+
+td {
+  
+  vertical-align: text-top;
+
+}
+
+
+
+.table_period {
+  text-align: right;
+}
+
+
+.col_skills {
+  width: 30%;
+}
+
+.table_projects{
+  border-collapse: collapse !important;
+ 
+
+}
+
+
+
+.table_projects td {
+  
+    padding-left: 10px;
+    border: .5px solid #595959;
+    font-weight: 300 !important;
+
+}
+
+
+
+.table_projects p {
+  
+      margin: 0 !important;
+
+}
+
+td.proj_info {
+  
+  background-color:#EEEEEE !important;
+  color: black !important;
+  vertical-align: middle !important;
+}
+
+td.white_border {
+  
+  border-bottom: 1px solid white !important;
+  
+}
+
+.page_break{
+  page-break-after: always;
+  
+}
+
+
+@page { 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: 10mm 15mm 20mm 10mm;  
+} 
+
+
+
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+  
+  a{
+    color:blue !important;
+  }
+  
+  .header_section{
+    
+    font-size: 12px !important;
+  }
+  
+  h1.title {
+  text-align: center;
+  font-size: 22px !important;
+}
+  
+  p, td{
+  font-size: 11px;
+  page-break-inside: avoid !important;
+  page-break-before: avoid !important;
+}
+.icon_header{
+ width: 16px;
+margin: 10px 10px 0 0 !important;
+}
+
+.icon_big{
+  margin: 5px 10px 0 0 !important;
+}
+.page-break-avoid {
+page-break-inside: avoid !important;
+page-break-before: avoid !important;
+}
+
+
+
+
+}

@@ -1,0 +1,212 @@
+---
+title: Jaime Andrés Arau Pontones
+output:
+  html_document:
+    css: www/cv.css
+---
+
+```{r, echo=FALSE, warning=FALSE}
+## load packages
+source("1.Code/00_set_up.R")
+
+## text for CV
+
+source("1.Code/05_text_for_CV.R")
+
+
+```
+
+<head>
+
+  <style>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </style>
+</head>
+
+
+<p style = "text-align: center;">
+`r txt_website` <br>
+`r txt_address`  | <img class = "icon_intro" src = "4.imgs/phone.png"> `r txt_phone` | <img class = "icon_intro" src = "4.imgs/email.png"> `r txt_email` 
+</p>
+
+
+<p style = "font-weight: bold;">
+
+Economist with over `r txt_years_of_experience` years’ experience in data science, statistical analysis and visualisation, household surveys, and Monitoring, Evaluation, and Learning (MEL) systems. My expertise lies on combining MEL approaches with data science tools such as online dashboards and interactive maps to enhance learning and facilitate ongoing adaptation and accountability of development programmes. By having led the design and implementation of large-scale data collection exercises internationally, I have also gained extensive expertise in project management and training of local teams. My professional experience expands over more than `r txt_number_projects` projects across `r txt_number_countries` countries worldwide.  
+</p>
+
+ 
+
+<img src = "4.imgs/globe.png" class = "icon_header icon_big"> <h1 class="header_section"> INTERNATIONAL EXPERIENCE </h1>
+
+
+`r knitr::combine_words(txt_countries)`
+
+
+
+<img src ="4.imgs/education.png" class = "icon_header icon_big">  <h1 class="header_section"> EDUCATION </h1>
+
+
+<table>
+  <tr>
+    <td> **MSc. In Economic Development and Growth |** Lund University and Carlos III de Madrid	 </td>
+    <td class = "table_period"> 2012 - 2014 </td>
+  </tr>
+  
+  <tr>
+  <td> **B.A. Honours in Economics with a minor in Global Studies |** University of Ottawa  </td>
+  <td class = "table_period"> 2005 - 2009</td>
+  </tr>
+  
+</table>
+
+
+<img src ="4.imgs/skills.png" class = "icon_header"> <h1 class="header_section"> PERSONAL SKILLS AND COMPETENCIES </h1>
+
+
+<table class = "skills">
+  <tr>
+    <td class = "col_skills"> Languages </td>
+    <td> `r txt_languages` </td>
+  </tr>
+  
+  <tr>
+    <td> Software & Systems</td>
+    <td> `r knitr::combine_words(txt_software)` </td>
+  </tr>
+</table>
+
+
+<img src ="4.imgs/experience.png" class = "icon_header"> <h1 class="header_section"> PROFESSIONAL EXPERIENCE </h1>
+
+<table>
+
+
+<tr>
+  <td>**Independent Data Scientist**</td>
+  <td class ="table_period" >2019 - now</td>
+</tr>
+
+<tr>
+<td>
+* Data visualization, GIS, and interactive dashboards;
+* Design frameworks and digital systems to monitor large development programmes;
+* Advice on survey implementation internationally;
+* Build local capacity to robustly implement data collection exercises
+</td>
+</tr>
+
+<tr>
+  <td>**Survey and Data Specialist | Oxford Policy Management.** Oxford, UK</td>
+  <td class ="table_period" >2015 - 2019</td>
+</tr>
+
+<tr>
+<td>
+* Design and implementation of large data collection exercises internationally; 
+* Development of system and real time dashboards for Data Quality Assurance of household surveys; 
+* Questionnaire design and CAPI programming.
+
+</td>
+</tr>
+
+
+<tr>
+  <td>**Project Manager | C-230 CONSULTORES / FUNDACIÓN IDEA.** Mexico City, Mexico</td>
+  <td class ="table_period" >2014 - 2015</td>
+</tr>
+
+<tr>
+<td>
+*	Evaluation design and econometric data analysis; 
+*	Training and management of fieldwork teams for data collection exercises.
+</td>
+</tr>
+
+
+<tr>
+  <td>**Summer Intern. Gender diversity unit | INTER-AMERICAN DEVELOPMENT BANK.** Washington D.C</td>
+  <td class ="table_period" >2013</td>
+</tr>
+
+<tr>
+<td>
+*	Evaluation design and econometric data analysis.
+</td>
+</tr>
+
+
+<tr>
+  <td>**Monitoring and Evaluation Officer | THE HUNGER PROJECT.** Mexico City, Mexico</td>
+  <td class ="table_period" >2009 - 2012</td>
+</tr>
+
+<tr>
+<td>
+*	Design and implementation of MEL Systems; and
+*	Design, implementation, and analysis of Participatory Rural Appraisals.
+
+</td>
+</tr>
+
+
+<tr>
+  <td>**Consultant | ASHOKA MÉXICO & CENTRAL AMERICA.** Mexico City, Mexico</td>
+  <td class ="table_period" >2010 - 2011</td>
+</tr>
+
+<tr>
+<td>
+*	Evaluation design; and
+* Training and management of fieldwork teams for data collection exercises
+
+
+</td>
+</tr>
+
+</table>
+
+<div class = "page_break"> </div>
+
+<img src ="4.imgs/projects.png" class = "icon_header"> <h1 class="header_section"> PROJECTS WHICH BEST ILLUSTRATE MY SKILLS AND COMPETENCIES </h1>
+
+`r txt_projects`
+<!-- Write your comments here 
+<table id = "table_projects">
+`r txt_projects`
+</table>
+
+-->
+
+```{r echo=FALSE, warning=FALSE}
+#pagedown::chrome_print("template.html", "template3.pdf")
+```
+
+
+<img src ="4.imgs/conference.png" class = "icon_header"> <h1 class="header_section"> CONFERENCES AND SEMINARS </h1>
+
+<table>
+
+<tr>
+  <td>**European Commission & Government of Cuba** | Havana, Cuba</td>
+  <td class ="table_period" >2014 - 2015</td>
+</tr>
+
+<tr>
+<td>
+Lecturer at Seminar on Impact Evaluation
+</td>
+</tr>
+</table>
+
+<img src ="4.imgs/fellowship.png" class = "icon_header"> <h1 class="header_section"> FELLOWSHIPS AND ADDITIONAL INFORMATION </h1>
+
+<table>
+
+<tr>
+  <td>European Commission Erasmus Mundus Fellowship</td>
+  <td class ="table_period" >2012 - 2014</td>
+</tr>
+
+
+</table>
