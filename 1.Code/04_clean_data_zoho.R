@@ -30,30 +30,30 @@ centroids = read_rds(file.path(dir_data_clean, "centroids.rds"))
          end_year = replace_na(end_year, "now"),
          
          for_table = glue::glue('<table class = "table_projects">
-         <tr class = "page-break-avoid">
-                                <td rowspan = "3" style = "width:80%;" class = "page-break-avoid">
-                               <span class = "avoid">
+         <tr>
+                                <td rowspan = "3" class = "col_project">
+                              
                                 **{Project}**<br>
                                 {Description} {url_example}
-                                </span>
+                               
                                 </td>
   
-                                <td class = "proj_info white_border page-break-avoid">
+                                <td class = "proj_info white_border">
                                 
                                 {start_year} - {end_year} 
                                 
                                 </td>
                                 
-                                <tr class = "page-break-avoid">
-                                  <td class = "proj_info white_border page-break-avoid">
+                                <tr>
+                                  <td class = "proj_info white_border">
                                   {Countries}
                                   </td>
                                 </tr>
                                 
-                                <tr class = "page-break-avoid">
-                                <td class = "proj_info page-break-avoid"">
-                                {Organizations}
-                                </td>
+                                <tr>
+                                  <td class = "proj_info">
+                                    {Organizations}
+                                  </td>
                                 </tr>
                                 </table>
                                 ')) %>%

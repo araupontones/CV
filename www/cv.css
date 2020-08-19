@@ -72,6 +72,11 @@ td {
   text-align: right;
 }
 
+.col_project{
+  
+  width: 80%;
+  
+}
 
 .col_skills {
   width: 30%;
@@ -79,6 +84,7 @@ td {
 
 .table_projects{
   border-collapse: collapse !important;
+  width: 100%;
  
 
 }
@@ -106,6 +112,7 @@ td.proj_info {
   background-color:#EEEEEE !important;
   color: black !important;
   vertical-align: middle !important;
+  
 }
 
 td.white_border {
@@ -140,7 +147,6 @@ td.white_border {
   }
   
   .header_section{
-    
     font-size: 12px !important;
   }
   
@@ -151,23 +157,29 @@ td.white_border {
   
   p, td{
   font-size: 11px;
-  page-break-inside: avoid !important;
-  page-break-before: avoid !important;
 }
+
+/* Icons of headers (the big ones needed a different format*/
 .icon_header{
  width: 16px;
-margin: 10px 10px 0 0 !important;
+  margin: 10px 10px 0 0 !important;
 }
 
 .icon_big{
   margin: 5px 10px 0 0 !important;
 }
-.page-break-avoid {
-page-break-inside: avoid !important;
-page-break-before: avoid !important;
+
+
+
 }
 
+@media only screen and (max-width: 600px) {
+ .table_projects p{
+    font-size: 13px !important;
+}
 
-
-
+td.proj_info{
+  
+  font-size:10px !important;
+}
 }
