@@ -1,118 +1,137 @@
+:root {
+/* font size of title*/
+  --size_title_laptop: 28px;
+  --size_title_print: 22px;
+/* font size of section headers*/
+  --size_h1_laptop:24px;
+  --size_h1_print:12px;
+
+/*size of text*/
+  --size_p_laptop:16px;
+  --size_p_print:11px;
+
+/*color of borders */
+ --color_border_h1: black;
+  
+}
+
+ 
+
+
 
 body{
   font-family: 'Roboto', sans-serif;
   
 }
 
+/* style of title (Name on the top of the CV) */
 .title {
   
 text-align: center;
-font-size: 28px;
+font-size: var(--size_title_laptop);
 }
 
-p, td{
-  font-size: 16px;
+/*icons of the introduction section (phone and email) */
+.icon_intro {
+  width: 16px;
   
-}
-
-
-table {
-    page-break-inside: avoid;
 }
 
 /*space between lines in introduction details */
-
 br.short{
-  
     display: block;
     content: "";
     margin-bottom: -2pt;
 }
+
+
+p, td{
+  font-size: var(--size_p_laptop);
+}
+
+
+
+
+
+/* Style of headers of sections */
 .header_section{
-  border-bottom: 1px solid black;
-  font-size: 24px;
+  border-bottom: 1px solid var(--color_border_h1);
+  font-size:  var(--size_h1_laptop);
   font-weight: 300;
 }
+
+/*icons in the headers of section */
 
 .icon_header {
   width: 24px;
   float: left;
   margin: 16px 10px 0 0;
-  
 }
 
+/* icons that need a different margin */
 .icon_big{
   
   margin: 10px 10px 0 0 !important;
 }
-.icon_intro {
-  width: 16px;
-  
-  
-}
+
+
 
 table{
-  
   width: 100%;
-  border-collapse: separate;
+  /*border-collapse: separate;*/
   border-spacing: 0 .5em ;
   /*vertical-align: text-top !important;*/
+  page-break-inside: avoid;
 
 }
 
 td {
-  
   vertical-align: text-top;
-
 }
 
 
-
-.table_period {
+/*columns with periods of time (i.e 2019-2020) */
+.col_period {
   text-align: right;
 }
 
+/*columns with project details */
 .col_project{
-  
   width: 80%;
-  
 }
 
+/*column of the personal skills and competences (languages and SOftware)*/
 .col_skills {
   width: 30%;
 }
 
 .table_projects{
-  border-collapse: collapse !important;
+  /*border-collapse: collapse !important;*/
   width: 100%;
  
 
 }
 
-
-
+/*table of projects */
 .table_projects td {
-  
     padding-left: 10px;
     border: .5px solid #595959;
     font-weight: 300 !important;
-
 }
 
 
 
 .table_projects p {
-  
+  /*the margin is to force the vertical allignment*/
       margin: 0 !important;
 
 }
 
+/*column of project information (date, country, org)*/
 td.proj_info {
-  
   background-color:#EEEEEE !important;
   color: black !important;
   vertical-align: middle !important;
-  
 }
 
 td.white_border {
@@ -121,15 +140,16 @@ td.white_border {
   
 }
 
+/*page break*/
 .page_break{
   page-break-after: always;
   
 }
 
 
+
 @page { 
     size: auto;   /* auto is the initial value */ 
-
     /* this affects the margin in the printer settings */ 
     margin: 10mm 15mm 20mm 10mm;  
 } 
@@ -138,6 +158,7 @@ td.white_border {
 
 
 @media print {
+ /*to avoid printing links and mails in brakets when printing*/
   a[href]:after {
     content: none !important;
   }
@@ -146,17 +167,20 @@ td.white_border {
     color:blue !important;
   }
   
-  .header_section{
-    font-size: 12px !important;
-  }
+ 
+ 
+ 
   
   h1.title {
   text-align: center;
-  font-size: 22px !important;
+  font-size: var(--size_title_print) !important;
 }
   
+ .header_section{
+    font-size: var(--size_h1_print) !important;
+  }
   p, td{
-  font-size: 11px;
+  font-size: var(--size_p_print);
 }
 
 /* Icons of headers (the big ones needed a different format*/
@@ -174,12 +198,20 @@ td.white_border {
 }
 
 @media only screen and (max-width: 600px) {
- .table_projects p{
+ 
+ /*adjust font of project table to mantain format of table*/
+ .col_project p{
     font-size: 13px !important;
 }
 
-td.proj_info{
+.proj_info{
   
-  font-size:10px !important;
+  font-size:11px !important;
 }
+
+.proj_info p{
+  
+  font-size:11px !important;
+} 
+
 }

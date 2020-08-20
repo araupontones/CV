@@ -50,12 +50,12 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 <table>
   <tr>
     <td> **MSc. In Economic Development and Growth |** Lund University and Carlos III de Madrid	 </td>
-    <td class = "table_period"> 2012 - 2014 </td>
+    <td class = "col_period"> 2012 - 2014 </td>
   </tr>
   
   <tr>
   <td> **B.A. Honours in Economics with a minor in Global Studies |** University of Ottawa  </td>
-  <td class = "table_period"> 2005 - 2009</td>
+  <td class = "col_period"> 2005 - 2009</td>
   </tr>
   
 </table>
@@ -84,7 +84,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
   <td>**Independent Data Scientist**</td>
-  <td class ="table_period" >2019 - now</td>
+  <td class ="col_period" >2019 - now</td>
 </tr>
 
 <tr>
@@ -98,7 +98,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
   <td>**Survey and Data Specialist | Oxford Policy Management.** Oxford, UK</td>
-  <td class ="table_period" >2015 - 2019</td>
+  <td class ="col_period" >2015 - 2019</td>
 </tr>
 
 <tr>
@@ -113,7 +113,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
   <td>**Project Manager | C-230 CONSULTORES / FUNDACIÓN IDEA.** Mexico City, Mexico</td>
-  <td class ="table_period" >2014 - 2015</td>
+  <td class ="col_period" >2014 - 2015</td>
 </tr>
 
 <tr>
@@ -126,7 +126,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
   <td>**Summer Intern. Gender diversity unit | INTER-AMERICAN DEVELOPMENT BANK.** Washington D.C</td>
-  <td class ="table_period" >2013</td>
+  <td class ="col_period" >2013</td>
 </tr>
 
 <tr>
@@ -138,7 +138,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
   <td>**Monitoring and Evaluation Officer | THE HUNGER PROJECT.** Mexico City, Mexico</td>
-  <td class ="table_period" >2009 - 2012</td>
+  <td class ="col_period" >2009 - 2012</td>
 </tr>
 
 <tr>
@@ -152,7 +152,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
   <td>**Consultant | ASHOKA MÉXICO & CENTRAL AMERICA.** Mexico City, Mexico</td>
-  <td class ="table_period" >2010 - 2011</td>
+  <td class ="col_period" >2010 - 2011</td>
 </tr>
 
 <tr>
@@ -189,7 +189,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
   <td>**European Commission & Government of Cuba** | Havana, Cuba</td>
-  <td class ="table_period" >2014 - 2015</td>
+  <td class ="col_period" >2014 - 2015</td>
 </tr>
 
 <tr>
@@ -205,7 +205,7 @@ Lecturer at Seminar on Impact Evaluation
 
 <tr>
   <td>European Commission Erasmus Mundus Fellowship</td>
-  <td class ="table_period" >2012 - 2014</td>
+  <td class ="col_period" >2012 - 2014</td>
 </tr>
 
 
