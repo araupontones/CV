@@ -1,6 +1,8 @@
 
 ## Load libraries and functions
 source("1.Code/00_set_up.R")
+source("1.Code/00_secret.R")
+
 
 
 
@@ -8,8 +10,8 @@ source("1.Code/00_set_up.R")
 
 base = "https://creator.zoho.com/api/json/cv/view/"
 user = "araupontones@gmail.com"
-password = "Seguridad1@"
-token  = "e61c6bb1c9792351a488d931374dd6c5"
+password = password
+token  = token
 scope = "creatorapi"
 
 #reports to download
