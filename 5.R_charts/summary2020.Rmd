@@ -1,0 +1,30 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+
+```{r cars, echo=FALSE}
+
+library(pacman)
+p_load(tidyverse)
+  projects = projects_20 %>%
+  group_by(Project) %>%
+  slice(1) %>%
+  ungroup
+
+txt_projects = paste(projects$for_table, collapse = " ")
+
+```
+
+
+## Projects I worked for in 2020:
+
+`r text_projects`
