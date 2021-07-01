@@ -1,65 +1,42 @@
-
-## Load libraries and functions
-source("1.Code/00_set_up.R")
-source("1.Code/00_secret.R")
+library(zohor)
+library(glue)
 
 
+#define parameters of app -------------------------------------------------------
+app <- "cv"
+report <- "All_Projects"
+
+refresh_token = "1000.b11df28b89daaeb2df10fa2c43178db6.6f953944b607f0ff366915cb9a770edc"
+
+#refresh zoho token --------------------------------------------------------------
+new_token <- zohor::refresh_token(
+  base_url = "https://accounts.zoho.com",
+  client_id = "1000.V0FA571ML6VV7YFWRC4Q7OKQ32U5PZ",
+  client_secret = "c551969c7d49a7a945ac2da12d1a3fe5f241b8dae6",
+  refresh_token = refresh_token
+)
 
 
-#set parameters for query =====================================================================================================
-
-base = "https://creator.zoho.com/api/json/cv/view/"
-user = "araupontones@gmail.com"
-password = password
-token  = token
-scope = "creatorapi"
-
-#reports to download
-reports = c("All_Projects")
-
-#Function to get the data ======================================================================================================
-get_data = function(l) {
-  
-  link = paste0(base, l) # creates the link 
-  r = GET(link, query = list(
-    authtoken = token ,
-    scope = scope ,
-    zc_ownername = "araupontones"
-    
-    
-  ))
-  
-  print(l)
-  text = content(r,"text") #transform report to text
-  
-  text = content(r,"text")
-  text2 = str_remove(text,"var zohoaraupontonesview[0-9][0-9] = ") #this line is blocking from parsing 
-  text2 = str_remove(text2,";$") #this semicolon is also blocking from parsing
-  
-  
-  jason = fromJSON(text2, flatten = T, bigint_as_char=TRUE) # parse to json
-  p = as.data.frame(jason[1]) #Finally to a dataset 
-  
-  
-  col_old = colnames(p) #clean names (all variables have a prefixx with the name of the table)
-  col_new = str_remove_all(col_old,".+(?=\\.)\\.")
-  colnames(p) = col_new
-  
-  
-  return(p)
-  
-  
-}
+ 
 
 
+#download data -----------------------------------------------------------------
+projects <-zohor::get_report(url_app = "https://creator.zoho.com" ,
+                  account_owner_name = "araupontones" ,
+                  app_link_name = "cv",
+                  report_link_name = "All_Projects",
+                  access_token = new_token,
+                  criteria = "ID != 0",
+                  from = 1)
 
-my_datas = purrr::map(reports, get_data)   #reports is created in the parameters section
-names(my_datas) = reports #name each data in the list
-
-projects = my_datas$All_Projects
-
+#unnest list columns (multiple select variables)
+projects_unnested <- projects %>%   
+  mutate_if(is.list,get_value_from_list)
+ 
 
 ## Export to raw Data
-write_rds(projects,file.path(dir_data_raw, "Projects_zoho.rds"))
+write_rds(projects_unnested,file.path(dir_data_raw, "Projects_zoho.rds"))
 
 
+
+              

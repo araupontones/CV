@@ -8,7 +8,7 @@ df_projects = read_rds(file.path(dir_data_clean, "Projects_clean.rds")) %>%
 ## Address 
 
 txt_phone = "+34657402968"
-txt_email = "andres.arau@outlook.com"
+txt_email = "andres.arau@pulpodata.org"
 txt_address = "Pablo Ruiz Picasso, No.4, 8D. Zaragoza, Spain. 50018"
 txt_website = "https://www.andresarau.com"
 
