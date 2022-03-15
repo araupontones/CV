@@ -1,4 +1,5 @@
 
+#cli::cli_alert_info("Loading Parameters")
 library(pacman)
 
 p_load(httr, jsonlite, lubridate, rprojroot, stringr, tidyverse)
@@ -13,6 +14,6 @@ dir_CV = "CV"
 
 ## Load funcitons
 
-source(file.path(dir_code,"01_functions.R"))
+#source(file.path(dir_code,"01_functions.R"))
 
 

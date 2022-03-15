@@ -1,6 +1,7 @@
-source("1.Code/00_set_up.R")
+#source("1.Code/00_set_up.R")
 
 #source("1.Code/02_download_zoho.R")
+cli::cli_alert_info("Cleaning Data")
 
 
 ## read data 

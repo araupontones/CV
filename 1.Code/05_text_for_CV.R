@@ -1,4 +1,5 @@
-source("1.Code/00_set_up.R")
+#source("1.Code/00_set_up.R")
+#cli::cli_alert_info("Creating text for CV")
 
 df_projects_long = read_rds(file.path(dir_data_clean, "Projects_clean_long.rds"))
 df_projects = read_rds(file.path(dir_data_clean, "Projects_clean.rds")) %>%

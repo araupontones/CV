@@ -1,5 +1,9 @@
+cli::cli_alert_info("Downloading data")
+
 library(zohor)
 library(glue)
+
+
 
 
 #define parameters of app -------------------------------------------------------
@@ -28,6 +32,18 @@ projects <-zohor::get_report(url_app = "https://creator.zoho.com" ,
                   access_token = new_token,
                   criteria = "ID != 0",
                   from = 1)
+
+#function to unnest multiple select variables -------------------------------
+get_value_from_list<- function(x){
+  
+  lapply(x, function(y){
+    
+    str_flatten(y[[1]], collapse = ", ")
+  })
+  
+  
+}
+
 
 #unnest list columns (multiple select variables)
 projects_unnested <- projects %>%   
