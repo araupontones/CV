@@ -24,7 +24,7 @@ txt_years_of_experience = year(Sys.Date()) - 2010
 txt_countries = sort(unique(df_projects_long$Country))
 txt_number_countries = length(txt_countries) ## number of countries
 
-
+View(df_projects_long)
 ## Projects 
 
 txt_number_projects = nrow(df_projects)

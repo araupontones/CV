@@ -12,6 +12,7 @@ centroids = read_rds(file.path(dir_data_clean, "centroids.rds"))
 
 
 
+
 ##clean data --------------------------------------------------------------------------------------------
 
 
@@ -60,21 +61,43 @@ centroids = read_rds(file.path(dir_data_clean, "centroids.rds"))
                                 ')) %>%
     arrange(desc(start_date))
   
-  
  
     
-## 2 Create a long version for the countries
-  # projects_long = projects_clean %>%
-  #   select(-Countries) %>%
-  #   pivot_longer(cols = starts_with("countries"),
-  #                values_to = "Country") %>%
-  #   select(-name) %>%
-  #   filter(Country != "") %>%
-  #   mutate(Country = str_trim(Country))
+
+   long <- lapply(split(projects_clean, projects_clean$Project), function(a){
+     
+     
+     Project <- a$Project[1]
+     countries <-  unlist(strsplit(a$Countries[[1]],","))
+     message(Project)
+     lista_project <- lapply(countries, function(c){
+       
+       db <- tibble(Project = Project,
+                    Country = c) %>%
+         mutate(Country = trim(Country))
+       
+        db
+       
+     })
+     
+     
+     do.call(rbind, lista_project)
+     
+     
+     
+     
+   })
+   
+   
+   projects_long <- do.call(rbind, long) %>%
+     mutate(Countyr = str_trim(Country))
+   
+ 
+   
   #               
 
 
 ## Export data to clean directory
   write_rds(projects_clean,file.path(dir_data_clean, "Projects_clean.rds"))
-  #write_rds(projects_long,file.path(dir_data_clean, "Projects_clean_long.rds"))
+  write_rds(projects_long,file.path(dir_data_clean, "Projects_clean_long.rds"))
   
