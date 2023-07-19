@@ -40,7 +40,7 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 <img src = "4.imgs/globe.png" class = "icon_header icon_big"> <h1 class="header_section"> INTERNATIONAL EXPERIENCE </h1>
 
 
-`r knitr::combine_words(txt_countries)`
+`r knitr::combine_words(txt_countries)`.
 
 
 
