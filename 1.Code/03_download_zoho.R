@@ -1,4 +1,4 @@
-cli::cli_alert_info("Downloading data")
+cli::cli_h1("Downloading data")
 
 library(zohor)
 library(glue)

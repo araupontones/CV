@@ -1,5 +1,5 @@
 
-#cli::cli_alert_info("Loading Parameters")
+cli::cli_h1("Loading Parameters")
 library(pacman)
 
 p_load(httr, jsonlite, lubridate, rprojroot, stringr, tidyverse)

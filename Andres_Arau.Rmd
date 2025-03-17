@@ -5,7 +5,7 @@ output:
     css: www/cv.css
 ---
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 ## load packages
 source("1.Code/00_set_up.R")
 
@@ -32,7 +32,7 @@ source("1.Code/05_text_for_CV.R")
 
 <p style = "font-weight: bold;">
 
-Economist with over `r txt_years_of_experience` years’ experience in data science, statistical analysis and visualisation, household surveys, and Monitoring, Evaluation, and Learning (MEL) systems. My expertise lies on combining MEL approaches with data science tools such as online dashboards and interactive maps to enhance learning and facilitate ongoing adaptation and accountability of development programmes. By having led the design and implementation of large-scale data collection exercises internationally, I have also gained extensive expertise in project management and training of local teams. My professional experience expands over more than `r txt_number_projects` projects across `r txt_number_countries` countries worldwide.  
+Economist with `r txt_years_of_experience`+ years of experience in data science and MEL. I specialize in using data science to improve learning and accountability in development programs. My expertise includes data analysis, dashboard development, global data collection initiatives, and capacity-building. I have successfully led over `r txt_number_projects` projects in `r txt_number_countries` countries, demonstrating my ability to navigate diverse contexts and deliver impactful results through the effective use of data-driven insights.
 </p>
 
  
@@ -89,10 +89,11 @@ Economist with over `r txt_years_of_experience` years’ experience in data scie
 
 <tr>
 <td>
-* Data visualization, GIS, and interactive dashboards;
-* Design frameworks and digital systems to monitor large development programmes;
-* Advice on survey implementation internationally;
-* Build local capacity to robustly implement data collection exercises
+* Design monitoring and evaluation frameworks;
+* Develop data collection strategies to efficiently inform MEL systems;
+* Design frameworks and digital systems to monitor large development programs;
+* Advise on survey and data collection implementation globally;
+* Build local capacity to robustly collect and analyze data.
 </td>
 </tr>
 

@@ -1,7 +1,7 @@
 #source("1.Code/00_set_up.R")
 
 #source("1.Code/02_download_zoho.R")
-cli::cli_alert_info("Cleaning Data")
+cli::cli_h1("Cleaning Data")
 
 
 ## read data 
@@ -14,7 +14,8 @@ centroids = read_rds(file.path(dir_data_clean, "centroids.rds"))
 
 
 ##clean data --------------------------------------------------------------------------------------------
-
+projects_clean$url_example
+names(projects_raw)
 
 ## 1 Clean multiple select questions
   #to_remove_brakets = c("Organizations", "Countries") ## define multiple select
@@ -23,20 +24,25 @@ centroids = read_rds(file.path(dir_data_clean, "centroids.rds"))
   projects_clean <- projects_raw %>%
     ## remove brackets from strings (to_remove_brackets is defined in 01_functions.R)
   mutate(#across(all_of(to_remove_brakets), remove_brakets),
-         across(ends_with("date"), dmy)) %>% 
+         across(ends_with("date"), dmy)) %>%
   ##Create an indepentent column for each answer (split_multi_select is defined in 01_functions.R)
     mutate(#split_multi_select(.,"Countries", "countries_"),
          #split_multi_select(.,"Organizations", "orgs_"),
          start_year = year(start_date),
          end_year = year(end_date),
-         end_year = replace_na(end_year, "now"),
+         end_year = replace_na(as.character(end_year), "now"),
+         text_url = ifelse(url_example == "", "", glue('[Example of my work]({url_example})')),
+         text_url_project = ifelse(url_project == "", "", 
+                                   glue('[See project]({url_project})')),
          
          for_table = glue::glue('<table class = "table_projects">
          <tr>
                                 <td rowspan = "3" class = "col_project">
                               
                                 **{Project}**<br>
-                                {Description} {url_example}
+                                {Description} <br>
+                                {text_url_project} <br>
+                                {text_url}
                                
                                 </td>
   
@@ -69,7 +75,7 @@ centroids = read_rds(file.path(dir_data_clean, "centroids.rds"))
      
      Project <- a$Project[1]
      countries <-  unlist(strsplit(a$Countries[[1]],","))
-     message(Project)
+     #message(Project)
      lista_project <- lapply(countries, function(c){
        
        db <- tibble(Project = Project,
@@ -90,11 +96,11 @@ centroids = read_rds(file.path(dir_data_clean, "centroids.rds"))
    
    
    projects_long <- do.call(rbind, long) %>%
-     mutate(Countyr = str_trim(Country))
+     mutate(Country = str_trim(Country))
    
  
    
-  #               
+   #               
 
 
 ## Export data to clean directory

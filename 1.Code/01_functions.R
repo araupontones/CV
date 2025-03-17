@@ -1,5 +1,5 @@
 ## Remove brackets in multiple select type of vars
-
+cli::cli_h1("Loading utils")
 remove_brakets <-  function(x){
   x <- str_remove_all(x,"\\[|\\]" ) ##remove brakets
   

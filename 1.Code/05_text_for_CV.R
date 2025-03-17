@@ -1,5 +1,5 @@
 #source("1.Code/00_set_up.R")
-#cli::cli_alert_info("Creating text for CV")
+cli::cli_h1("Creating text for CV")
 
 df_projects_long = read_rds(file.path(dir_data_clean, "Projects_clean_long.rds"))
 df_projects = read_rds(file.path(dir_data_clean, "Projects_clean.rds")) %>%
@@ -16,15 +16,14 @@ txt_website = "https://www.andresarau.com"
 
 
 ## 1. Years of experience
-txt_years_of_experience = year(Sys.Date()) - 2010
-
+txt_years_of_experience = year(Sys.Date()) - 2009
 
 
 ## 1. Countries I have worked in
 txt_countries = sort(unique(df_projects_long$Country))
 txt_number_countries = length(txt_countries) ## number of countries
 
-View(df_projects_long)
+
 ## Projects 
 
 txt_number_projects = nrow(df_projects)

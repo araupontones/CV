@@ -1,5 +1,5 @@
 #source("1.Code/00_set_up.R")
-cli::cli_alert_info("Cleaning centroids")
+cli::cli_h1("Cleaning centroids")
 
 centroids = CoordinateCleaner::countryref %>%
   filter(type == "country") %>%
